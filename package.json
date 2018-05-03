@@ -1,0 +1,30 @@
+{
+  "name": "google-finance-data",
+  "version": "0.0.1",
+  "description": "Real-time stock quotes and data from Google Finance for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitquant/google-finance-data.git"
+  },
+  "keywords": [
+    "google finance",
+    "stock",
+    "market",
+    "price",
+    "quote",
+    "data"
+  ],
+  "author": "bitquant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bitquant/google-finance-data/issues"
+  },
+  "homepage": "https://github.com/bitquant/google-finance-data#readme",
+  "dependencies": {
+    "puppeteer": "1.3.0"
+  }
+}
