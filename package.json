@@ -1,6 +1,6 @@
 {
   "name": "google-finance-data",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Real-time stock quotes and data from Google Finance for Node.js",
   "main": "index.js",
   "scripts": {
