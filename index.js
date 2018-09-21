@@ -1,6 +1,7 @@
 'use strict';
 
 const puppeteer = require('puppeteer');
+const NestedError = require('nested-error-stacks');
 
 function getTextContent(element) {
     return element.getProperty('textContent').then(property => property.jsonValue());;
@@ -21,6 +22,7 @@ const getSymbol = async (symbol) => {
 
     //page.on('console', msg => console.log('PAGE_LOG:', msg.text));
     symbol = symbol.toUpperCase();
+    let fetchError = null;
 
     for (let prefix of symbolPrefix) {
 
@@ -87,13 +89,12 @@ const getSymbol = async (symbol) => {
             return stockData;
         }
         catch (err) {
-            console.error(err.stack ? err.stack : err)
+            fetchError = err;
         }
     }
 
     browser.close();
-
-    throw new Error(`unable to fetch data for ${symbol}`);
+    throw new NestedError(`unable to fetch data for ${symbol}`, fetchError);
 };
 
 exports.getSymbol = getSymbol;
