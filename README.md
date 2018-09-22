@@ -1,5 +1,5 @@
 # google-finance-data
-Real-time stock quotes and data from Google Finance for Node.js
+Google Finance API for real-time stock quotes and company data from Google Finance
 
 ## Install
 ```

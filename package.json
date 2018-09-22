@@ -1,6 +1,6 @@
 {
   "name": "google-finance-data",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Google Finance API for real-time stock quotes and company data from Google Finance",
   "main": "index.js",
   "scripts": {
